@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Main Page -->
+    <url>
+        <loc>https://yourdomain.com/</loc>
+        <lastmod>2024-04-30</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- Hero Section -->
+    <url>
+        <loc>https://yourdomain.com/#home</loc>
+        <lastmod>2024-04-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Courses Section -->
+    <url>
+        <loc>https://yourdomain.com/#courses</loc>
+        <lastmod>2024-04-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Why Choose Us Section -->
+    <url>
+        <loc>https://yourdomain.com/#why-us</loc>
+        <lastmod>2024-04-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Faculty Section -->
+    <url>
+        <loc>https://yourdomain.com/#faculty</loc>
+        <lastmod>2024-04-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Results Section -->
+    <url>
+        <loc>https://yourdomain.com/#results</loc>
+        <lastmod>2024-04-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Contact Section -->
+    <url>
+        <loc>https://yourdomain.com/#contact</loc>
+        <lastmod>2024-04-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+</urlset>

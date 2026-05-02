@@ -1,0 +1,30 @@
+# Bhairavi Academy - Robots.txt
+# This file tells search engines which pages to crawl and which to ignore
+
+# Allow all bots to crawl the site
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.pdf$
+Disallow: /*.zip$
+
+# Specific rules for Googlebot
+User-agent: Googlebot
+Allow: /
+
+# Specific rules for Bingbot
+User-agent: Bingbot
+Allow: /
+
+# Crawl delay (optional - time between requests in seconds)
+Crawl-delay: 1
+
+# Request rate (optional)
+Request-rate: 1/10s
+
+# Sitemap location
+Sitemap: https://yourdomain.com/sitemap.xml
+
+# Cache rules
+Cache-Control: public, max-age=2592000

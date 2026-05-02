@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#FF8C00">
+    <meta name="description" content="Bhairavi Academy - Expert NEET & JEE Coaching with 95% Success Rate">
+    <title>Bhairavi Academy - NEET & JEE Coaching Excellence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23FF8C00' width='100' height='100'/%3E%3Ctext x='50' y='65' font-size='60' fill='white' text-anchor='middle' font-family='Arial, sans-serif' font-weight='bold'%3EBA%3C/text%3E%3C/svg%3E">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect fill='%23FF8C00' width='180' height='180' rx='40'/%3E%3Ctext x='90' y='120' font-size='100' fill='white' text-anchor='middle' font-family='Arial, sans-serif' font-weight='bold'%3EBA%3C/text%3E%3C/svg%3E">
+    <script src="https://vycjeuekbwnfurpbuvtw.supabase.co/rest/v1/"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <div class="logo" id="logoArea">
+                    <!-- Academy Logo Image (add your logo here) -->
+                    <img id="logoImage" src="" alt="Bhairavi Academy Logo" class="logo-img" style="display: none; height: 100px; width: auto;">
+                    <!-- Fallback: Icon + Text -->
+                    <div id="logoFallback" class="logo-fallback">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Bhairavi Academy</span>
+                    </div>
+                </div>
+                <!-- Hidden input for logo upload (for admin/edit mode) -->
+                
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#courses" class="nav-link">Courses</a>
+                <a href="#why-us" class="nav-link">Why Us</a>
+                <a href="#faculty" class="nav-link">Faculty</a>
+                <a href="#results" class="nav-link">Results</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">Crack NEET & JEE with Expert Guidance</h1>
+            <p class="hero-subtitle">10th, 11th, 12th | Foundation | Crash Course | Repeaters</p>
+            
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('#contact')">Enroll Now</button>
+                <button class="btn btn-secondary" onclick="callNow()">
+                    <i class="fas fa-phone"></i> Call Now
+                </button>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h3>700+</h3>
+                    <p>Students Trained</p>
+                </div>
+                <div class="stat-item">
+                    <h3>90%</h3>
+                    <p>Success Rate</p>
+                </div>
+                <div class="stat-item">
+                    <h3>7+</h3>
+                    <p>Expert Faculty</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Courses</h2>
+                <p>Comprehensive coaching programs designed for your success</p>
+            </div>
+
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="card-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3>NEET Coaching</h3>
+                    <p>Complete medical entrance preparation with proven success rate</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check"></i> Physics, Chemistry, Biology</li>
+                        <li><i class="fas fa-check"></i> Mock Tests Weekly</li>
+                        <li><i class="fas fa-check"></i> Personalized Doubt Sessions</li>
+                    </ul>
+                    <button class="btn btn-outline">Learn More</button>
+                </div>
+
+                <div class="course-card">
+                    <div class="card-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>JEE Coaching</h3>
+                    <p>Advanced mathematics and science for engineering aspirants</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check"></i> JEE Main & Advanced</li>
+                        <li><i class="fas fa-check"></i> Problem-Solving Sessions</li>
+                        <li><i class="fas fa-check"></i> Speed & Accuracy Training</li>
+                    </ul>
+                    <button class="btn btn-outline">Learn More</button>
+                </div>
+
+                <div class="course-card">
+                    <div class="card-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>11th & 12th (CBSE/ICSE/State)</h3>
+                    <p>Complete curriculum coverage for board exams and competitive exams</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check"></i> Board Preparation</li>
+                        <li><i class="fas fa-check"></i> Competitive Edge</li>
+                        <li><i class="fas fa-check"></i> Regular Assessments</li>
+                    </ul>
+                    <button class="btn btn-outline">Learn More</button>
+                </div>
+
+                <div class="course-card">
+                    <div class="card-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Foundation Courses</h3>
+                    <p>Build strong fundamentals for classes 6-10</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check"></i> Conceptual Learning</li>
+                        <li><i class="fas fa-check"></i> Interactive Classes</li>
+                        <li><i class="fas fa-check"></i> Foundation for Success</li>
+                    </ul>
+                    <button class="btn btn-outline">Learn More</button>
+                </div>
+
+                <div class="course-card">
+                    <div class="card-icon">
+                        <i class="fas fa-fast-forward"></i>
+                    </div>
+                    <h3>Crash Courses</h3>
+                    <p>Intensive last-minute preparation for exams</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check"></i> Rapid Revision</li>
+                        <li><i class="fas fa-check"></i> High-Yield Topics</li>
+                        <li><i class="fas fa-check"></i> Full-Length Tests</li>
+                    </ul>
+                    <button class="btn btn-outline">Learn More</button>
+                </div>
+
+                <div class="course-card">
+                    <div class="card-icon">
+                        <i class="fas fa-repeat"></i>
+                    </div>
+                    <h3>Repeaters Batch</h3>
+                    <p>Special program for repeaters with personalized strategy</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check"></i> Targeted Improvement</li>
+                        <li><i class="fas fa-check"></i> One-on-One Mentoring</li>
+                        <li><i class="fas fa-check"></i> Weakness Analysis</li>
+                    </ul>
+                    <button class="btn btn-outline">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="why-us">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Bhairavi Academy?</h2>
+                <p>Excellence in education through expert guidance and proven methodology</p>
+            </div>
+
+            <div class="why-us-grid">
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Expert Faculty</h3>
+                    <p>Highly qualified teachers with 7+ years of experience in competitive exam coaching</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Proven Results</h3>
+                    <p>90% success rate with 500+ students selected in top institutions annually</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Personalized Attention</h3>
+                    <p>Small batch sizes and individual doubt sessions for focused learning</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Regular Tests & Analysis</h3>
+                    <p>Weekly mock tests with detailed performance analysis and improvement strategies</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Modern Learning Tools</h3>
+                    <p>Interactive classes, digital resources, and online support for better learning outcomes</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Comprehensive Curriculum</h3>
+                    <p>Complete coverage with latest exam patterns and updated study materials</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Results Section -->
+    <section id="results" class="results">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Achievements</h2>
+                <p>Track record of excellence and student success</p>
+            </div>
+
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-number" data-target="700">0</div>
+                    <p class="result-label">Students Trained</p>
+                    <p class="result-description">Across all programs and batches</p>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-number" data-target="500">0</div>
+                    <p class="result-label">Selections Achieved</p>
+                    <p class="result-description">In medical & engineering colleges</p>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-number" data-target="90">0</div>
+                    <p class="result-label">Success Rate (%)</p>
+                    <p class="result-description">Among our dedicated students</p>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-number" data-target="10">0</div>
+                    <p class="result-label">Experience</p>
+                    <p class="result-description">Having 10+ years of teaching experience</p>
+                </div>
+            </div>
+
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Bhairavi Academy gave me a great platform for my neet preparation and provided the maximum possible facilities and an opportunity to learn from the best teachers and to bring the best out of me. They helps us understand the lessons easily.The way they encourage the students is awesome. Daily class test makes us more informative and confident. I liked the way of teaching very easy to understand and also the friendly atmosphere."</p>
+                    <p class="testimonial-author">- Mejila Rincy</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"As a parent, I couldn't be more pleased with BHAIRAVI academy. The dedication of the teachers and the personalized attention given to each student really sets this academy apart. The supportive environment and comprehensive study materials not only helped my child prepare for the NEET exam but also boosted their confidence. I am truly grateful for the positive impact this academy has had on my child's academic journey. I highly recommend it to any parent looking for best NEET preparation for their child."</p>
+                    <p class="testimonial-author">- Latha Austin</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"I am impressed with your curriculum and teaching methods which is different from other institution.
+The teachers are very caring and knowledgeable.
+Their individual care is what distinguishes this academy from other. (Mainly Chemistry mam)
+Me as a student of Bhairavi academy would
+Recommended this academy for you....."</p>
+                    <p class="testimonial-author">- Mohamed Shafin</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Start Your Success Journey Today</h2>
+            <p>Join hundreds of successful students who have achieved their dreams</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('#contact')">Enroll Now</button>
+                <button class="btn btn-secondary" onclick="callNow()">
+                    <i class="fas fa-phone"></i> Call Us
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Have questions? We're here to help you succeed</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Phone</h3>
+                        <p><a href="tel:+918056738833">+91 8056738833</a></p>
+                        <p class="info-secondary">Call anytime, our team is ready to help</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Address</h3>
+                        <p>K.P Road, Near KFC<br>Nagercoil, Tamil Nadu</p>
+                        <p class="info-secondary">Visit us to explore our facilities</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>WhatsApp</h3>
+                        <p><a href="https://wa.me/918056738833" target="_blank">Chat with us</a></p>
+                        <p class="info-secondary">Quick responses to your queries</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Working Hours</h3>
+                        <p>Mon - Sat: 9:00 AM - 8:00 PM<br>Sun: 9:00 AM - 3:00 PM</p>
+                        <p class="info-secondary">Always available for admissions</p>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Quick Inquiry</h3>
+                    <form id="enquiryForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone Number" pattern="[0-9]{10}" required>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Select Course</option>
+                                <option value="NEET">NEET Coaching</option>
+                                <option value="JEE">JEE Coaching</option>
+                                <option value="11-12">11th & 12th</option>
+                                <option value="Foundation">Foundation Course</option>
+                                <option value="Crash">Crash Course</option>
+                                <option value="Repeaters">Repeaters Batch</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Inquiry</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Google Maps Embed -->
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.0373891456627!2d77.41427!3d8.17286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0441e5e5e5e5e5%3A0x0!2sKP%20Road%20Nagercoil!5e0!3m2!1sen!2sin!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Bhairavi Academy</h4>
+                    <p>Your trusted partner in competitive exam preparation and academic excellence.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/bhairavistudycentrengl/" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/bhairavi_academy?igsh=ZDFuajh6OW03ZW9x" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#faculty">Faculty</a></li>
+                        <li><a href="#why-us">Why Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Courses</h4>
+                    <ul>
+                        <li><a href="#courses">NEET Coaching</a></li>
+                        <li><a href="#courses">JEE Coaching</a></li>
+                        <li><a href="#courses">Foundation Course</a></li>
+                        <li><a href="#courses">Crash Course</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> +91 8056738833</p>
+                    <p><i class="fas fa-map-marker-alt"></i> K.P Road, Near KFC, Nagercoil</p>
+                    <p><i class="fas fa-envelope"></i> info@bhairavi.com</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bhairavi Academy. All rights reserved. | Designed for Excellence</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/918056738833" class="whatsapp-btn" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" title="Back to Top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

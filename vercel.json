@@ -1,0 +1,21 @@
+{
+  "buildCommand": "echo 'Static site'",
+  "outputDirectory": ".",
+  "routes": [
+    {
+      "src": "/(?!styles\\.css|script\\.js|manifest\\.json|sw\\.js|sitemap\\.xml|robots\\.txt|favicon|apple-touch|images/)(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    }
+  ]
+}
